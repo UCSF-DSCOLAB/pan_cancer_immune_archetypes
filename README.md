@@ -29,9 +29,9 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 		Input files should have this format (example file for Tcell flow vs Score correlation `files_used_for_plots/tcell_flow_and_Score.tsv`). 
 		
 
-							  flow_Tcell	Score
-		IPIBLAD032.T1.rna.live	  31.3	  46.97986577
-		IPIBLAD033.T1.rna.live	  0.66	  2.684563758
+							  	|flow_Tcell |	Score
+		IPIBLAD032.T1.rna.live	|  31.3	    |  46.97986577
+		IPIBLAD033.T1.rna.live	|  0.66     | 2.684563758
 		
 		Input files can be made from calculating scores with get_score.py and joining the corresponding flow data
 
@@ -44,7 +44,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 	
 
 
-## Contact Info
+# Contact Info
 
 Bushra Samad (email: Bushra[dot]Samad[at]ucsf[dot]edu)
 Alexis Combes (email: Alexis[dot]Combes[at]ucsf[dot]edu)
