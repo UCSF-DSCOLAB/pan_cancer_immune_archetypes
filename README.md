@@ -24,7 +24,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 		  -f <gene file>  path to normalized gene expression file (TPM or logCPM) with
 		                  samples in the columns and genes in the rows 
 	
-1.   **Figure 1D** `correlation_score_from_flow.py `  
+3.   **Figure 1D** `correlation_score_from_flow.py `  
 
 	Input files should have this format (example file for Tcell flow vs Score correlation `files_used_for_plots/tcell_flow_and_Score.tsv`). 
 		
@@ -36,7 +36,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 		Input files can be made from calculating scores with get_score.py and joining the corresponding flow data
 
 	`python correlation_score_from_flow.py ../files_used_for_plots/tcell_flow_and_Score.tsv`
-1. **Figure 1E** `cross_whisker_plots_flow.py` 
+4. **Figure 1E** `cross_whisker_plots_flow.py` 
 
 	input files needed 
 	
