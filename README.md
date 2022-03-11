@@ -44,7 +44,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 	
 
 
-# Contact Info
+## Contact Info
 
 Bushra Samad (email: Bushra[dot]Samad[at]ucsf[dot]edu)
 Alexis Combes (email: Alexis[dot]Combes[at]ucsf[dot]edu)
