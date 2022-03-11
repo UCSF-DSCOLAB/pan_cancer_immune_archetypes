@@ -26,20 +26,22 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 	
 1.   **Figure 1D** `correlation_score_from_flow.py `  
 
-		Input files should have this format (example file for Tcell flow vs Score correlation `files_used_for_plots/tcell_flow_and_Score.tsv`). 
+	Input files should have this format (example file for Tcell flow vs Score correlation `files_used_for_plots/tcell_flow_and_Score.tsv`). 
 		
 
-							  	|flow_Tcell |	Score
-		IPIBLAD032.T1.rna.live	|  31.3	    |  46.97986577
-		IPIBLAD033.T1.rna.live	|  0.66     | 2.684563758
-		
+								|flow_Tcell |Score
+		IPIBLAD032.T1.rna.live	|  31.3	    |  46.98
+		IPIBLAD033.T1.rna.live	|  	0.66    |   2.68
+	
 		Input files can be made from calculating scores with get_score.py and joining the corresponding flow data
 
 	`python correlation_score_from_flow.py ../files_used_for_plots/tcell_flow_and_Score.tsv`
 1. **Figure 1E** `cross_whisker_plots_flow.py` 
-`input files needed 
-	1. feature scores tsv file output of `get_score.py` (example file in `/files_used_for_plots/tcell_score_percentile_of_percentiles.tsv`
-	2. flow scores tsv file output of `get_flow_score.py` (example file in `/files_used_for_plots/Flow_score_Sept10_2020_Tcell_percentile_of_percent.tsv`
+
+	input files needed 
+	
+			1. feature scores tsv file output of `get_score.py` (example file in `/files_used_for_plots/tcell_score_percentile_of_percentiles.tsv`
+			2. flow scores tsv file output of `get_flow_score.py` (example file in `/files_used_for_plots/Flow_score_Sept10_2020_Tcell_percentile_of_percent.tsv`
 
 	
 
