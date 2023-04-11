@@ -32,19 +32,19 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/3_feature_matrix.txt for IPI. 
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI. 
 				2. The feature scores for TCGA using not included but can be generated using TCGA data and `get_score.py``
 				
-1.  **Figures 2H-I, 2K** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/3_feature_matrix.txt`
-2.  **Figure 2M** heatmap was made using `seaborn.clustermap` with medians calculated from TPMs in `/files_used_for_plots/3_feature_matrix.txt`
-3. **Figure 2N** barplot and bubble plots were made using `seaborn.barplot` and `seaborn.scatter` respectively with medians calculated from TPMs in ``/files_used_for_plots/3_feature_matrix.txt` for IPI the chemokine TPMs for TCGA are not included
+1.  **Figures 2H-I, 2K** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/feature_matrix.txt`
+2.  **Figure 2M** heatmap was made using `seaborn.clustermap` with medians calculated from TPMs in `/files_used_for_plots/feature_matrix.txt`
+3. **Figure 2N** barplot and bubble plots were made using `seaborn.barplot` and `seaborn.scatter` respectively with medians calculated from TPMs in ``/files_used_for_plots/feature_matrix.txt` for IPI the chemokine TPMs for TCGA are not included
  
 ### **Figure 3**
 1. **Figures 3A** `3_feature_UMAP_IPI.py`
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/3_feature_matrix.txt for IPI. 
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI. 
 1. **Figures 3B-C** `TCGA_survival_3_features.py`
 
 	input files needed
@@ -76,7 +76,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 	 				
 	 
 	 		
-1.   **Figures 3D-E** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/3_feature_matrix.txt`
+1.   **Figures 3D-E** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/feature_matrix.txt`
 
 ### **Figure 4**
 1. **Figure 4A** `get_flow_score.py`
@@ -85,10 +85,10 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/6_feature_matrix.txt for IPI.
-1. **Figures 4D,4G** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/6_feature_matrix.txt`
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI.
+1. **Figures 4D,4G** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/feature_matrix.txt`
 2. **Figures 4E** the alluvial plot was made using [RAWgraphs 2.0](https://www.rawgraphs.io/)
-3. **Figure 4F** heatmap was made using `seaborn.clustermap` with medians calculated from TPMs in `/files_used_for_plots/6_feature_matrix.txt`
+3. **Figure 4F** heatmap was made using `seaborn.clustermap` with medians calculated from TPMs in `/files_used_for_plots/feature_matrix.txt`
 
 ### **Figure 5**
 1. **Figure 5A** `get_flow_score.py`
@@ -97,14 +97,14 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/10_feature_matrix.txt for IPI.
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI.
 				
 1. **Figures 5B** the alluvial plot was made using [RAWgraphs 2.0](https://www.rawgraphs.io/)
 2. **Figures 5D-N** boxplots and scatter plots were made using `seaborn.boxplot` and `seaborn.scatter` respectively.
-3. **Figures 5P-Q, 5S-T** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/10_feature_matrix.txt`
+3. **Figures 5P-Q, 5S-T** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/feature_matrix.txt`
 
 ### **Figure 6**
-1. **Figures 6A-D** heatmap and bubble plots were made using `seaborn.clustermap` and `seaborn.scatter` respectively with medians of chemokines calculated from TPMs in ``/files_used_for_plots/10_feature_matrix.txt`. TPMS for other genes can be 	found on using the GEO accession GSE184398
+1. **Figures 6A-D** heatmap and bubble plots were made using `seaborn.clustermap` and `seaborn.scatter` respectively with medians of chemokines calculated from TPMs in ``/files_used_for_plots/feature_matrix.txt`. TPMS for other genes can be 	found on using the GEO accession GSE184398
 
 ### **Figure 7**
 1. **Figures 7A-B**
@@ -112,7 +112,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/10_feature_matrix.txt for IPI.
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI.
 1. **Figures 7B-E** boxplot, heatmaps and bubble plot were made using `seaborn.boxplot` `seaborn.clustermap` and `seaborn.scatter` respectively.TPMS for genes can be 	found on using the GEO accession GSE184398
 2. **Figures 7F** `TCGA_survival_10_features.py`
 
@@ -193,13 +193,13 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 	
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/3_feature_matrix.txt for IPI.
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI.
 			
 1. **Figures 2SD** `3_feature_UMAP_IPI.py`
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/3_feature_matrix.txt for IPI.
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt for IPI.
 
 1. **Figures 2SE-F** boxplots and scatter plots were made using `seaborn.boxplot` and `seaborn.scatter` respectively.
 
@@ -260,13 +260,13 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/6_feature_matrix.txt
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt
 
 1.  **Figure 4SE** `DBI_frequency_of_clusters.py`
 	
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/6_feature_matrix.txt.
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt.
 1. **Figures 4SG-H, 4SI, 4SN-N** boxplots and scatter plots were made using `seaborn.boxplot` and `seaborn.scatter` respectively.
 
 ### **Figure 5S**	
@@ -277,13 +277,13 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 	
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/10_feature_matrix.txt.
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt.
 
 1. **Figures 5SI-J** `10_feature_UMAP_IPI.py`
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/10_feature_matrix.txt
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt
 
 
 ### **Figure 6S**
@@ -292,9 +292,9 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 	input file needed 
 		
-				1. feature matrix tsv file output (example file in `/files_used_for_plots/10_feature_matrix.txt
+				1. feature matrix tsv file output (example file in `/files_used_for_plots/feature_matrix.txt
 	
-1. **Figures 6SC-E, 6SG** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/10_feature_matrix.txt`
+1. **Figures 6SC-E, 6SG** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/feature_matrix.txt`
 
 ### **Figure 7S**
 1. **Figures 7SA-K** `TCGA_survival_10_features.py`
