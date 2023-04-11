@@ -1,4 +1,4 @@
-# Discovering Dominant Tumor Immune Archetypes in A Pan-Cancer Census
+# Discovering Dominant Tumor Immune Archetypes in a Pan-Cancer Census
 
 This repository contains code used to create figures for this paper
 All RNAseq and single cell data is available using the GEO accession GSE184398. Some data that is not available on GEO or [UCSF Data Library](https://datalibrary.ucsf.edu/node/121/) has been added to this folder `files_used_for_plots`
@@ -8,21 +8,6 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 ### **Figure 1**
 
 1. **Figure 1C** `get_flow_score.py` input files are in `files_used_for_plots`
-2. **Figure S1D**
-
-		python get_score.py -h
-		
-		Usage: get_score.py -o <output file name> -g <gene signature file name> -f <gene expresson tsv>  [options] ALL OPTIONS ARE REQUIRED
-		
-		Get gene signature score
-		
-		Options:
-		  -h, --help      show this help message and exit
-		  -t <title>      title used for all output files
-		  -g <gene sig>   path to a file with a list of genes (HUGO Names) in gene
-		                  signature.
-		  -f <gene file>  path to normalized gene expression file (TPM or logCPM) with
-		                  samples in the columns and genes in the rows 
 	
 3.   **Figure 1D** `correlation_score_from_flow.py `  
 
@@ -31,9 +16,7 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 
 					|flow_Tcell |Score
 		IPIBLAD032.T1.rna.live	|  31.3	    |  46.98
-<<<<<<< HEAD
-		IPIBLAD033.T1.rna.live	|  	0.66    |   2.68
-	
+
 		Input files can be made from calculating scores with get_score.py and joining the corresponding flow data
 
 	`python correlation_score_from_flow.py ../files_used_for_plots/tcell_flow_and_Score.tsv`
@@ -64,24 +47,36 @@ All RNAseq and single cell data is available using the GEO accession GSE184398. 
 				1. feature matrix tsv file output (example file in `/files_used_for_plots/3_feature_matrix.txt for IPI. 
 1. **Figures 3B-C** `TCGA_survival_3_features.py`
 
-input files needed
-
-Can be found here
- [XENA Browser](https://xenabrowser.net/datapages/?cohort=TCGA%20Pan-Cancer%20(PANCAN)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)		
+	input files needed
 	
-				
-			   1. A folder with TCGA name mappings files for each indication in the format below
+	Can be found here
+	 [XENA Browser](https://xenabrowser.net/datapages/?cohort=TCGA%20Pan-Cancer%20(PANCAN)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)
+	 			  
 				   
-					  new_name	| tcga
-					0	BLCA_0		| TCGA-2F-A9KO-01
-					1	BLCA_1		| TCGA-2F-A9KP-01
-					2	BLCA_2		| TCGA-2F-A9KQ-01
+		
 					
- 			   2. A folder with TCGA clinical data files for each indication 
-					
-
-
-2. **Figures 3D-E** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/3_feature_matrix.txt`
+ 			   1. A folder with TCGA clinical data files for each of these indications ('HNSC','KIRC','SKCM','BLCA','SARC','OV','UCEC','UCS','COAD','LIHC','LUAD','PAAD','GBM') 			   
+ 			   
+ 			    TCGA
+	 				|_ BLCA
+	 				|	|_ BLCA_clinical_data.tsv
+	 				|
+	 				|_COAD
+	 				|	|_ COAD_clinical_data.tsv
+	 				.
+	 				.
+	 				.
+ 			   
+ 			   2. TCGA archetypes file `/files_used_for_plots/TCGA_archetypes.tsv`
+ 			    
+ 			    
+ 			      
+ 			     
+	 				
+	 				
+	 
+	 		
+1.   **Figures 3D-E** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/3_feature_matrix.txt`
 
 ### **Figure 4**
 1. **Figure 4A** `get_flow_score.py`
@@ -119,7 +114,29 @@ Can be found here
 		
 				1. feature matrix tsv file output (example file in `/files_used_for_plots/10_feature_matrix.txt for IPI.
 1. **Figures 7B-E** boxplot, heatmaps and bubble plot were made using `seaborn.boxplot` `seaborn.clustermap` and `seaborn.scatter` respectively.TPMS for genes can be 	found on using the GEO accession GSE184398
-2. **Figures 7F** `cox_regression.py` 				
+2. **Figures 7F** `TCGA_survival_10_features.py`
+
+	input files needed
+	
+	Can be found here
+	 [XENA Browser](https://xenabrowser.net/datapages/?cohort=TCGA%20Pan-Cancer%20(PANCAN)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)
+	 			  
+				   
+		
+					
+ 			   1. A folder with TCGA clinical data files for each of these indications ('HNSC','KIRC','SKCM','BLCA','SARC','OV','UCEC','UCS','COAD','LIHC','LUAD','PAAD','GBM') 			   
+ 			   
+ 			    TCGA
+	 				|_ BLCA
+	 				|	|_ BLCA_clinical_data.tsv
+	 				|
+	 				|_COAD
+	 				|	|_ COAD_clinical_data.tsv
+	 				.
+	 				.
+	 				.
+ 			   
+ 			   2. TCGA archetypes file `/files_used_for_plots/TCGA_archetypes_assigned.tsv` 				
 
 
 ##Supplementary Figures
@@ -153,7 +170,20 @@ Can be found here
 		  -t <title>      Title in quotes e.g. "Tregs vs Tcells"
 		 
 1. 	**Figure 1SC**	 `correlation_score_from_flow.py ` see figure 1D
-2. **Figure 1SD** `get_flow_score.py` see figure 1C
+2. **Figure 1SD** `get_score.py`
+	python get_score.py -h
+		
+		Usage: get_score.py -o <output file name> -g <gene signature file name> -f <gene expresson tsv>  [options] ALL OPTIONS ARE REQUIRED
+		
+		Get gene signature score
+		
+		Options:
+		  -h, --help      show this help message and exit
+		  -t <title>      title used for all output files
+		  -g <gene sig>   path to a file with a list of genes (HUGO Names) in gene
+		                  signature.
+		  -f <gene file>  path to normalized gene expression file (TPM or logCPM) with
+		                  samples in the columns and genes in the rows 
 3. **Figure 1SE** `cross_whisker_plots_flow.py`  see figure 1E
 
 
@@ -176,7 +206,31 @@ Can be found here
 ### **Figure 3S**	  
 
 1. **Figures 3SA** `3_feature_UMAP_IPI.py`
-2. **Figures 3SB-D** `cox_regression.py` 	
+2. **Figures 3SB-D** `TCGA_survival_3_features.py`
+
+	input files needed
+	
+	Can be found here
+	 [XENA Browser](https://xenabrowser.net/datapages/?cohort=TCGA%20Pan-Cancer%20(PANCAN)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)
+	 			  
+				   
+		
+					
+ 			   1. A folder with TCGA clinical data files for each of these indications ('HNSC','KIRC','SKCM','BLCA','SARC','OV','UCEC','UCS','COAD','LIHC','LUAD','PAAD','GBM') 			   
+ 			   
+ 			    TCGA
+	 				|_ BLCA
+	 				|	|_ BLCA_clinical_data.tsv
+	 				|
+	 				|_COAD
+	 				|	|_ COAD_clinical_data.tsv
+	 				.
+	 				.
+	 				.
+ 			   
+ 			   2. TCGA archetypes file `/files_used_for_plots/TCGA_archetypes.tsv`      
+       			   
+ 			    	
 
 ### **Figure 4S**	 
 
@@ -243,32 +297,35 @@ Can be found here
 1. **Figures 6SC-E, 6SG** boxplots made using `seaborn.boxplot` with data in `/files_used_for_plots/10_feature_matrix.txt`
 
 ### **Figure 7S**
-1. **Figures 7SA-K** `cox_regression.py`
+1. **Figures 7SA-K** `TCGA_survival_10_features.py`
+
+	input files needed
+	
+	Can be found here
+	 [XENA Browser](https://xenabrowser.net/datapages/?cohort=TCGA%20Pan-Cancer%20(PANCAN)&removeHub=https%3A%2F%2Fxena.treehouse.gi.ucsc.edu%3A443)
+	 			  
+				   
+		
+					
+ 			   1. A folder with TCGA clinical data files for each of these indications ('HNSC','KIRC','SKCM','BLCA','SARC','OV','UCEC','UCS','COAD','LIHC','LUAD','PAAD','GBM') 			   
+ 			   
+ 			    TCGA
+	 				|_ BLCA
+	 				|	|_ BLCA_clinical_data.tsv
+	 				|
+	 				|_COAD
+	 				|	|_ COAD_clinical_data.tsv
+	 				.
+	 				.
+	 				.
+ 			   
+ 			   2. TCGA archetypes file `/files_used_for_plots/TCGA_archetypes_assigned.tsv`
+
+	
 
 # Contact Info
 
 Bushra Samad (email: Bushra[dot]Samad[at]ucsf[dot]edu)
 Alexis Combes (email: Alexis[dot]Combes[at]ucsf[dot]edu)
 Matthew Krummel (email: Matthew[dot]Krummel[at]ucsf[dot]edu)
-=======
-		IPIBLAD033.T1.rna.live	|   0.66    |   2.68
-	
-		Input files can be made from calculating scores with get_score.py and joining the corresponding flow data
 
-	`python correlation_score_from_flow.py ../files_used_for_plots/tcell_flow_and_Score.tsv`
-4. **Figure 1E** `cross_whisker_plots_flow.py` 
-
-	input files needed 
-	
-			1. feature scores tsv file output of `get_score.py` (example file in `/files_used_for_plots/tcell_score_percentile_of_percentiles.tsv`
-			2. flow scores tsv file output of `get_flow_score.py` (example file in `/files_used_for_plots/Flow_score_Sept10_2020_Tcell_percentile_of_percent.tsv`
-
-	
-
-
-# Contact Info
-
-Bushra Samad (email: Bushra[dot]Samad[at]ucsf[dot]edu)
-Alexis Combes (email: Alexis[dot]Combes[at]ucsf[dot]edu)
-Matthew Krummel (email: Matthew[dot]Krummel[at]ucsf[dot]edu)
->>>>>>> a2fe0a0d50729d1c8ab85fa1eee7e9e44d81622b

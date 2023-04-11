@@ -51,10 +51,10 @@ def get_anndata_formats(df,df_features):
 def main():
   
   # load up data
-  df = pd.read_csv('../files_used_for_plots/10_feature_matrix.txt', sep='\t',index_col=[0], header=0)
+  df = pd.read_csv('../files_used_for_plots/feature_matrix.txt', sep='\t',index_col=[0], header=0)
   
   #add title for output files
-  title ='Title3'
+  title ='Title4'
   print (df)
 
   df = df.T
