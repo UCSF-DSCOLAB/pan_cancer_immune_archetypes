@@ -1,7 +1,7 @@
 # Discovering Dominant Tumor Immune Archetypes in a Pan-Cancer Census
 
 This repository contains code used to create figures for this paper
-All RNAseq and single cell data is available using the GEO accession GSE184398. Some data that is not available on GEO or [UCSF Data Library](https://datalibrary.ucsf.edu/node/121/) has been added to this folder `files_used_for_plots`
+All RNAseq and single cell data is available using the GEO accession GSE184398. Some data that is not available on GEO or [UCSF Data Library](https://datalibraryarchive.ucsf.edu/node/121/) has been added to this folder `files_used_for_plots`
 
 # Analysis
 
